@@ -121,7 +121,6 @@ const Header = () => {
               title={link.label}
             >
               {link.label}
-              <span className={`absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-2 h-2 rounded-full bg-black ${activeSection === link.href ? 'block animate-bounce' : 'hidden'}`}></span>
             </Link>
           ))}
         </div>
