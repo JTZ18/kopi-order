@@ -15,19 +15,19 @@ const links: {
 }[] = [
   {
     href: "/#drink-type",
-    label: "Drink Type",
+    label: "☕️ Drinks",
   },
   {
     href: "/#other-drink",
-    label: "Other Drink",
+    label: "🥤 Other Drinks",
   },
   {
     href: "/#food",
-    label: "Food",
+    label: "🍔 Food",
   },
   {
     href: "/#total",
-    label: "Total",
+    label: "🛒 Total",
   },
 ];
 

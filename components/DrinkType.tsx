@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from "react";
+import toast from 'react-hot-toast';
 
 interface Order {
   item: string;
@@ -58,12 +59,14 @@ const DrinkType = ({ orders, setOrders }: DrinkOrderFormProps) => {
     setSelectedSugar("")
     setSelectedStrength("")
     setSelectedIce("")
+
+    toast("✅ Order Added !");
   };
 
   return (
     <section id="drink-type">
     <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mx-auto mt-10">
-      <h1 className="text-2xl font-bold text-center mb-4">Drink Order Form</h1>
+      <h1 className="text-2xl font-bold text-center mb-4">☕️ Drink Orders</h1>
 
       <div className="mb-4">
         <label className="block text-gray-700 font-semibold mb-2">Drink Type</label>

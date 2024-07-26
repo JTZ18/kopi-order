@@ -14,27 +14,28 @@ interface TotalProps {
 
 function Total({ orders, setOrders }: TotalProps) {
 
-  const updateOrderQuantity = (item: any, change: any) => {
+  const updateOrderQuantity = (item: string, change: number) => {
     let newOrders = [...orders]
     const orderIndex = newOrders.findIndex((o) => o.item === item);
 
     if (orderIndex >= 0) {
       const newQuantity = newOrders[orderIndex].quantity + change;
-      newOrders[orderIndex].quantity = newQuantity;
       if (newQuantity === 0) {
-          newOrders.splice(orderIndex, 1);
+        newOrders.splice(orderIndex, 1);
+      } else {
+        newOrders[orderIndex].quantity = newQuantity;
       }
     }
     setOrders(newOrders)
   };
 
   return (
-    <section id="total" className="flex flex-col items-center justify-center min-h-screen py-12 px-6 space-y-8 bg-gray-50">
-      <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full mx-auto">
-        <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">Order Summary</h2>
+    <section id="total">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mx-auto mt-10">
+        <h2 className="text-2xl font-bold text-center mb-4">Order Summary</h2>
         <div className="grid grid-cols-7 gap-4 mb-4 text-sm font-semibold text-gray-600 border-b pb-2">
           <span className="col-span-4">Item</span>
-          <span className="text-center col-span-1">Quantity</span>
+          <span className="text-center col-span-1">Qty</span>
           <span className="col-span-2 text-right">Actions</span>
         </div>
         <ul className="space-y-4">
