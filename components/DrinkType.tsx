@@ -96,10 +96,16 @@ const DrinkType = ({ orders, setOrders }: DrinkOrderFormProps) => {
         <label className="block text-gray-700 font-semibold mb-2">Milk</label>
         <div className="flex space-x-2">
           <button
-            className={`btn ${selectedMilk === "OC" ? "btn-secondary" : "btn-outline-secondary"}`}
-            onClick={() => handleMilkClick("OC")}
+            className={`btn ${selectedMilk === "O" ? "btn-secondary" : "btn-outline-secondary"}`}
+            onClick={() => handleMilkClick("O")}
           >
-            OC
+            O
+          </button>
+          <button
+            className={`btn ${selectedMilk === "Si" ? "btn-secondary" : "btn-outline-secondary"}`}
+            onClick={() => handleMilkClick("Si")}
+          >
+            Si
           </button>
           <button
             className={`btn ${selectedMilk === "Halia" ? "btn-secondary" : "btn-outline-secondary"}`}
@@ -126,10 +132,10 @@ const DrinkType = ({ orders, setOrders }: DrinkOrderFormProps) => {
             Siu Dai
           </button>
           <button
-            className={`btn ${selectedSugar === "Gam Dai" ? "btn-accent" : "btn-outline-accent"}`}
-            onClick={() => handleSugarClick("Gam Dai")}
+            className={`btn ${selectedSugar === "Gah Dai" ? "btn-accent" : "btn-outline-accent"}`}
+            onClick={() => handleSugarClick("Gah Dai")}
           >
-            Gam Dai
+            Gah Dai
           </button>
         </div>
       </div>
