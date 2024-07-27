@@ -5,6 +5,7 @@ import DrinkType from '@/components/DrinkType';
 import OtherDrink from '@/components/OtherDrink';
 import Total from '@/components/Total';
 import Food from '@/components/Food';
+import DeveloperInfo from '@/components/DeveloperInfo';
 
 export default function Home() {
   const [orders, setOrders] = useState([]); // list of objects {quantity: 0, item: ""}
@@ -21,6 +22,7 @@ export default function Home() {
         <OtherDrink orders={orders} setOrders={setOrders}/>
         <Food orders={orders} setOrders={setOrders} />
         <Total orders={orders} setOrders={setOrders} />
+        <DeveloperInfo />
       </main>
     </>
   );
